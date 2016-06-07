@@ -1,7 +1,8 @@
-a = 1
-y = 15/13
-b = 10/7
-z = 4/14
+hf = .025
+a = 1/3
+y = 1/3
+b = 4/3
+z = 1
 c = (a+z)/2
 d = (b+y)/2
 
@@ -25,8 +26,8 @@ away = p(d,5)*p(c,4)+p(d,5)*p(c,3)+p(d,5)*p(c,3)+p(d,5)*p(c,2)+p(d,5)*p(c,1)+p(d
 
 tot = draw + home + away
 dtot = draw/tot
-htot = (home/tot)*1.025
-atot = (away/tot)*.975
+htot = (home/tot)*(1+hf)
+atot = (away/tot)*(1-hf)
 cat("Home: ",htot)
 cat("Away: ",atot)
 cat("Draw: ",dtot)
